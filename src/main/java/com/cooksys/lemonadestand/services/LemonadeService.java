@@ -2,7 +2,6 @@ package com.cooksys.lemonadestand.services;
 
 import java.util.List;
 
-import com.cooksys.lemonadestand.entities.Lemonade;
 import com.cooksys.lemonadestand.model.LemonadeRequestDto;
 import com.cooksys.lemonadestand.model.LemonadeResponseDto;
 

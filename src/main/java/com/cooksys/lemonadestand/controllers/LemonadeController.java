@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cooksys.lemonadestand.entities.Lemonade;
 import com.cooksys.lemonadestand.model.LemonadeRequestDto;
 import com.cooksys.lemonadestand.model.LemonadeResponseDto;
 import com.cooksys.lemonadestand.services.LemonadeService;
