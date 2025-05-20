@@ -10,15 +10,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Table(name="order_table")
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Order {
 
 	@Id
