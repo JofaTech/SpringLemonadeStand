@@ -37,4 +37,9 @@ public class LemonadeServiceImpl implements LemonadeService {
 		return lemonadeMapper.entityToResponseDto(lemonadeRepository.saveAndFlush(lemonadeToSave));
 	}
 
+	@Override
+	public LemonadeResponseDto getLemonadeById(Long id) {
+		return lemonadeMapper.entityToResponseDto(lemonadeRepository.getReferenceById(id));
+	}
+
 }
