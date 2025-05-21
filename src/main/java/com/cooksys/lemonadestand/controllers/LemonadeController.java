@@ -2,6 +2,7 @@ package com.cooksys.lemonadestand.controllers;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,20 +22,20 @@ import lombok.AllArgsConstructor;
 public class LemonadeController {
 
 	private LemonadeService lemonadeService;
-	
+
 	@GetMapping
 	public List<LemonadeResponseDto> getAllLemonades() {
 		return lemonadeService.getAllLemonades();
 	}
-	
+
 	@PostMapping
-	public LemonadeResponseDto createLemonade(@RequestBody LemonadeRequestDto lemonadeRequestDto) {
+	public ResponseEntity<LemonadeResponseDto> createLemonade(@RequestBody LemonadeRequestDto lemonadeRequestDto) {
 		return lemonadeService.createLemonade(lemonadeRequestDto);
 	}
-	
+
 	@GetMapping("/{id}")
-	public LemonadeResponseDto getLemonadeById(@PathVariable Long id) {
+	public ResponseEntity<LemonadeResponseDto> getLemonadeById(@PathVariable Long id) {
 		return lemonadeService.getLemonadeById(id);
 	}
-	
+
 }

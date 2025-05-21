@@ -7,12 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 public class LemonadeRequestDto {
 
-	private double lemonJuice;
+	private Double lemonJuice;
 	
-	private double water;
+	private Double water;
 	
-	private double sugar;
+	private Double sugar;
 	
-	private int iceCubes;
+	private Integer iceCubes;
 	
 }
