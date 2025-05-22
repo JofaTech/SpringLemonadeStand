@@ -38,7 +38,8 @@ public class LemonadeServiceImpl implements LemonadeService {
 	}
 	
 	// Checks for lemonade by ID#, returns lemonade if it exists, custom exception otherwise
-	private Lemonade getLemonade(Long id) {
+	@Override
+	public Lemonade getLemonade(Long id) {
 		Optional<Lemonade> optionalLemonade = lemonadeRepository.findByIdAndDeletedFalse(id);
 		if (optionalLemonade.isEmpty()) {
 			throw new NotFoundException("No lemonade found with id: " + id);
